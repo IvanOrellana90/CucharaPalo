@@ -1,0 +1,1 @@
+<link href="{!! url('') !!}/dist/css/style.min.css" rel="stylesheet">
