@@ -9087,3 +9087,27 @@ strong {
   src: url("../css/fonts/Gilmer-Bold.eot?#iefix") format("embedded-opentype"), url("../css/fonts/Gilmer-Bold.otf") format("opentype"), url("../css/fonts/Gilmer-Bold.woff") format("woff"), url("../css/fonts/Gilmer-Bold.ttf") format("truetype"), url("../css/fonts/Gilmer-Bold.svg#Gilmer-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+
+
+a.sidebar-link.sidebar-link.social {
+    font-size: 14px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+.social > svg.feather.feather-icon {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.welcome-carousel .carousel-inner {
+  border-radius: 0.25em;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.welcome-carousel .img-fluid {
+  width: 100%;
+  object-fit: cover;
+}

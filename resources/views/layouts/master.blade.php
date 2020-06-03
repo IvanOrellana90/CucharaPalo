@@ -10,11 +10,11 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
-    <!-- Custom CSS -->
-    <link href="{!! url('') !!}/assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <title>Cuchara de Palo</title>
     <!-- Custom CSS -->
     @include('layouts.includes.css')
+    <!-- This Page CSS -->
+    @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,7 +56,25 @@
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            @yield('main')
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                @yield('main')
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            @include('layouts.includes.footer')
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
@@ -69,7 +87,10 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <!--Custom JavaScript -->
     @include('layouts.includes.js')
+    <!--This page plugins -->
+    @yield('js')
 </body>
 
 </html>

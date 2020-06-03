@@ -20,7 +20,7 @@
                     <!-- Logo text -->
                     <span class="logo-text">
                         <!-- dark Logo text -->
-                        <img src="../public/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                        <img src="../public/assets/images/logo2-cdp.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo text -->
                         <img src="../public/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
                     </span>
@@ -66,19 +66,22 @@
             <ul class="navbar-nav float-right">
                 <!-- Social Networks -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)">
+                    <a class="nav-link dropdown-toggle" href="https://www.instagram.com/cucharadepalo_chile/">
+                        <i data-feather="instagram" class="svg-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.facebook.com/Cucharadepalochile">
                         <span><i data-feather="facebook" class="svg-icon"></i></span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://twitter.com/Cucharadepaloc1">
+                        <i data-feather="twitter" class="svg-icon"></i>
                     </a>
                 </li>
                 <!-- End Social Networks -->
                 <!-- ============================================================== -->
-                <!-- create new -->
-                <!-- ============================================================== -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">
-                        <i data-feather="instagram" class="svg-icon"></i>
-                    </a>
-                </li>
             </ul>
         </div>
     </nav>

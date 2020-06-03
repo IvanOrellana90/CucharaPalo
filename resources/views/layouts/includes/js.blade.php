@@ -15,6 +15,3 @@
 <script src="{!! url('') !!}/dist/js/sidebarmenu.js"></script>
 <!--Custom JavaScript -->
 <script src="{!! url('') !!}/dist/js/custom.min.js"></script>
-<!--This page plugins -->
-<script src="{!! url('') !!}/assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="{!! url('') !!}/dist/js/pages/datatable/datatable-basic.init.js"></script>
