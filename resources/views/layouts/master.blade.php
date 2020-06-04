@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{!! url('') !!}/assets/images/favicon.png">
     <title>Cuchara de Palo</title>
     <!-- Custom CSS -->
     @include('layouts.includes.css')
@@ -55,7 +55,7 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <div class="page-wrapper font-weight-light">
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- Container fluid  -->

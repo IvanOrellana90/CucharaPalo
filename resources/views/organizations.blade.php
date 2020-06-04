@@ -3,49 +3,12 @@
 @section('css')
     <link href="{!! url('') !!}/assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
 @endsection
-
-@section('main')
     
+@section('main')
+
     <!-- ============================================================== -->
     <!-- Start Page Content -->
     <!-- ============================================================== -->
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div id="carouselExampleIndicators3" class="carousel slide welcome-carousel"
-                    data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators3" data-slide-to="0"
-                            class="active"></li>
-                        <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="card-body alert-primary">
-                                <h4 class="card-title text-primary">Una pequeña descripción</h4>
-                                <p class="card-text"><strong>Recopilación y sistematización</strong> de la información sobre <strong>ayuda humanitaria y sanitaria</strong>
-                                    que están ofreciendo organizaciones populares y ciudadanas en los diferentes
-                                    territorios <strong>en atención a la pandemia que estamos viviendo</strong>.</p>
-                                <a href="#bs-example-modal-lg-video" class="btn btn-info" data-toggle="modal"><i class="icon-control-play"></i> Ver video</a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-body alert-primary">
-                                <h4 class="card-title text-primary">Para voluntaries:</h4>
-                                <p class="card-text">Estamos creciendo y <strong>necesitamos ayuda en nuestros distintos equipos de trabajo</strong>: 
-                                    Manejo de la base de datos, recopilación de información, redes sociales, relaciones públicas, 
-                                    contacto con las organizaciones, entre otros.</p>
-                                <a href="#bs-example-modal-lg-voluntarios" data-toggle="modal" class="btn btn-info">Ver formulario</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="alert alert-warning" role="alert">
-        <strong>Ayúdanos a crear una red de apoyo - </strong> Ingresa la información de organizaciones populares que conozcas <a href="https://bit.ly/cucharadepaloregistro"><strong>aquí</strong></a>!
-    </div>
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -54,18 +17,18 @@
                         <table id="zero_config" class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Lugar</th>
-                                    <th>Apoyo</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
                                     <th>Ver</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                 <tr>
-                                    <td>{{ $item->a. " " .$item->b }}</td>
-                                    <td>{{ $item->d }}</td>
-                                <td><a href="javascript:void(0)" data-toggle="modal" data-target="#bs-example-modal-lg-{{ $item->id }}">
-                                            <i class="fas fa-search"></a></td>
+                                    <td>{{ $item->c }}</td>
+                                    <td>{{ $item->f }}</td>
+                                    <td><a href="javascript:void(0)" data-toggle="modal" data-target="#bs-example-modal-lg-{{ $item->id }}">
+                                        <i class="fas fa-search"></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -102,20 +65,6 @@
     <!-- ============================================================== -->
     <!-- End PAge Content -->
     <!-- ============================================================== -->
-
-    <!-- Modal HTML -->
-    <div class="modal fade" id="bs-example-modal-lg-video" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body alert-primary rounded">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b45_Gd9UQ-0" allowfullscreen></iframe>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal HTML Voluntarios -->
     <div class="modal fade" id="bs-example-modal-lg-voluntarios" tabindex="-1" role="dialog"
@@ -184,67 +133,73 @@
         </div>
     </div>
 
-    <!--  Modal content for the above example -->
-    @foreach ($data as $item)
-        <div class="modal fade rounded" id="bs-example-modal-lg-{{ $item->id }}" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h4 class="modal-title" id="myLargeModalLabel">{{ $item->c }}</h4>
-                        <button type="button" class="close" data-dismiss="modal"
-                            aria-hidden="true">×</button>
-                    </div>
-                    <div class="modal-body">
-                        @if ($item->f != "")
-                            <h6 class="font-weight-bold">Descripción</h6>
-                            <p>{{ $item->f }}</p>
-                            <hr>
-                        @endif
-                        @if ($item->a != "")
-                        <h6 class="font-weight-bold">Regiones sobre las que actúa la organización:</h6>
-                        <p>{{ $item->a }}</p>
-                        @endif
-                        @if ($item->b != "")
-                        <h6 class="font-weight-bold">Comunas donde presta apoyo:</h6>
-                        <p>{{ $item->b }}</p>
-                        @endif
-                        @if ($item->d != "")
-                        <h6 class="font-weight-bold">Tipos de apoyo que realiza:</h6>
-                        <p>{{ $item->d }}</p>
-                        @endif
-                        @if ($item->e != "")
-                        <h6 class="font-weight-bold">A quiénes apoya la organización:</h6>
-                        <p>{{ $item->e }}</p>
-                        @endif
-                        @if ($item->g != "")
-                        <h6 class="font-weight-bold">Redes Sociales:</h6>
-                        <p>{{ $item->g }}</p>
-                        @endif
-                        @if ($item->h != "")
-                        <h6 class="font-weight-bold">Sitio Web:</h6>
-                        <p><a href="{{ $item->h }}">{{ $item->h }}</a></p>
-                        @endif
-                        @if ($item->i != "")
-                        <h6 class="font-weight-bold">Correo:</h6>
-                        <p><a href="mailto:{{ $item->i }}">{{ $item->i }}</a></p>
-                        @endif
-                        @if ($item->j != "")
-                        <h6 class="font-weight-bold">Teléfono:</h6>
-                        <p>{{ $item->j }}</p>
-                        @endif
-                        @if ($item->k != "")
-                        <h6 class="font-weight-bold">Dirección:</h6>
-                        <p>{{ $item->k }}</p>
-                        @endif
-                        @if ($item->l != "")
-                        <h6 class="font-weight-bold">Limites territoriales:</h6>
-                        <p>{{ $item->l }}</p>
-                        @endif
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->    
+     <!--  Modal content for the above example -->
+     @foreach ($data as $item)
+     <div class="modal fade rounded" id="bs-example-modal-lg-{{ $item->id }}" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+                 <div class="modal-header">
+                 <h4 class="modal-title" id="myLargeModalLabel">{{ $item->c }}</h4>
+                     <button type="button" class="close" data-dismiss="modal"
+                         aria-hidden="true">×</button>
+                 </div>
+                 <div class="modal-body">
+                     @if ($item->f != "")
+                         <h6 class="font-weight-bold">Descripción</h6>
+                         <p>{{ $item->f }}</p>
+                         <hr>
+                     @endif
+                     @if ($item->a != "")
+                     <h6 class="font-weight-bold">Regiones sobre las que actúa la organización:</h6>
+                     <p>{{ $item->a }}</p>
+                     @endif
+                     @if ($item->b != "")
+                     <h6 class="font-weight-bold">Comunas donde presta apoyo:</h6>
+                     <p>{{ $item->b }}</p>
+                     @endif
+                     @if ($item->d != "")
+                     <h6 class="font-weight-bold">Tipos de apoyo que realiza:</h6>
+                     <p>{{ $item->d }}</p>
+                     @endif
+                     @if ($item->e != "")
+                     <h6 class="font-weight-bold">A quiénes apoya la organización:</h6>
+                     <p>{{ $item->e }}</p>
+                     @endif
+                     @if ($item->g != "")
+                     <h6 class="font-weight-bold">Redes Sociales:</h6>
+                     <p>{{ $item->g }}</p>
+                     @endif
+                     @if ($item->h != "")
+                     <h6 class="font-weight-bold">Sitio Web:</h6>
+                     <p><a href="{{ $item->h }}">{{ $item->h }}</a></p>
+                     @endif
+                     @if ($item->i != "")
+                     <h6 class="font-weight-bold">Correo:</h6>
+                     <p><a href="mailto:{{ $item->i }}">{{ $item->i }}</a></p>
+                     @endif
+                     @if ($item->j != "")
+                     <h6 class="font-weight-bold">Teléfono:</h6>
+                     <p>{{ $item->j }}</p>
+                     @endif
+                     @if ($item->k != "")
+                     <h6 class="font-weight-bold">Dirección:</h6>
+                     <p>{{ $item->k }}</p>
+                     @endif
+                     @if ($item->l != "")
+                     <h6 class="font-weight-bold">Limites territoriales:</h6>
+                     <p>{{ $item->l }}</p>
+                     @endif
+                 </div>
+                 <div class="modal-footer">
+                    <p>
+                        Si te gustaría complementar, modificar o tienes algo que decir sobre esta 
+                        iniciativa. Por favor escríbenos a: <a href="mailto:registro.cucharadepalo@gmail.com">registro.cucharadepalo@gmail.com</a>
+                    </p>
+                </div>
+             </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->    
     @endforeach
 
 @endsection
@@ -252,16 +207,4 @@
 @section('js')
     <script src="{!! url('') !!}/assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="{!! url('') !!}/dist/js/pages/datatable/datatable-basic.init.js"></script>
-
-
-    <!-- Stop video after close modal -->    
-
-    <script>
-
-        $("#bs-example-modal-lg-video").on('hidden.bs.modal', function (e) {
-            $("#bs-example-modal-lg-video iframe").attr("src", $("#bs-example-modal-lg-video iframe").attr("src"));
-        });
-
-    </script>
-
 @endsection

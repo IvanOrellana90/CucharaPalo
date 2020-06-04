@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', 'WelcomeController@welcome')->name('welcome');
 
+Route::get('/organizations', 'OrganizationController@organizations')->name('organizations');
+
 Route::get('/news', 'NewsController@news')->name('news');

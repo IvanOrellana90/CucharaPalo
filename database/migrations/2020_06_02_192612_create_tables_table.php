@@ -14,6 +14,7 @@ class CreateTablesTable extends Migration
     public function up()
     {
         Schema::create('tables', function (Blueprint $table) {
+            $table->id();
             $table->text('a')->nullable();
             $table->text('b')->nullable();
             $table->text('c')->nullable();

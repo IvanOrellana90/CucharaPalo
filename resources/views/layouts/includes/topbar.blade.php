@@ -12,17 +12,17 @@
                 <a href="">
                     <b class="logo-icon">
                         <!-- Dark Logo icon -->
-                        <img src="../public/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="../public/assets/images/logo-icon-cdp-1.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo icon -->
-                        <img src="../public/assets/images/logo-icon.png" alt="homepage" class="light-logo" />
+                        <img src="../public/assets/images/logo-icon-cdp-1.png" alt="homepage" class="light-logo" />
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span class="logo-text">
                         <!-- dark Logo text -->
-                        <img src="../public/assets/images/logo2-cdp.png" alt="homepage" class="dark-logo" />
+                        <img src="../public/assets/images/logo-cdp-1.jpeg" alt="homepage" class="dark-logo" />
                         <!-- Light Logo text -->
-                        <img src="../public/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        <img src="../public/assets/images/logo-cdp-1.jpeg" class="light-logo" alt="homepage" />
                     </span>
                 </a>
             </div>
@@ -66,17 +66,17 @@
             <ul class="navbar-nav float-right">
                 <!-- Social Networks -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://www.instagram.com/cucharadepalo_chile/">
+                    <a class="nav-link dropdown-toggle instagram" href="https://www.instagram.com/cucharadepalo_chile/">
                         <i data-feather="instagram" class="svg-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://www.facebook.com/Cucharadepalochile">
+                    <a class="nav-link dropdown-toggle facebook" href="https://www.facebook.com/Cucharadepalochile">
                         <span><i data-feather="facebook" class="svg-icon"></i></span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://twitter.com/Cucharadepaloc1">
+                    <a class="nav-link dropdown-toggle twitter" href="https://twitter.com/Cucharadepaloc1">
                         <i data-feather="twitter" class="svg-icon"></i>
                     </a>
                 </li>

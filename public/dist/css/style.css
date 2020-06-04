@@ -7402,7 +7402,7 @@ a.text-danger:hover, a.text-danger:focus {
   color: #ff0332 !important; }
 
 .text-light {
-  color: #e8eaec !important; }
+  color: #969696 !important; }
 
 a.text-light:hover, a.text-light:focus {
   color: #bec4c9 !important; }
@@ -9110,4 +9110,20 @@ a.sidebar-link.sidebar-link.social {
 .welcome-carousel .img-fluid {
   width: 100%;
   object-fit: cover;
+}
+
+.modal-content {
+  border-radius: 0.25em;
+}
+
+.instagram:hover {
+  color: #AB3E9E !important;
+}
+
+.facebook:hover {
+  color: #3b5998 !important;
+}
+
+.twitter:hover {
+  color: #019ad2 !important;
 }
